@@ -1,0 +1,126 @@
+1. requests抓取视频（多线程，无锁写文件）
+2. pyquery模块
+3. bs4解析html、xml
+4. py3.5+ async异步爬虫
+5. aiohttp模块
+6. selenium新进程调用假死chromedriver进程
+7. selenium清除假死chromedriver进程
+8. 多chromedriver同时运行
+9. selenium滑动、拖拽（AC模块）
+10. selenium录制生成python脚本
+11. pyvirtualdisplay启用driver无界面模式
+12. pywin32模块使用解决极验3.0滑动、点击、拼图
+13. pyautogui模块使用解决极验3.0滑动、点击、拼图
+14. 通过appium抓取app数据以及无界面服务器部署解决方案
+15. appium+mitmproxy抓取app流程数据
+16. wspy_dissector模块
+17. rabbitmq交互
+18. kafka交互
+19. zookeeper以及相关模块
+20. hbase交互
+21. hadoop以及hdfs搭建
+22. spark使用
+23. grpc、thrift、pickle模块
+24. kibana
+25. quark
+26. tensorflow识别图片
+27. opencv识别图片
+28. 调用腾讯产品中的接口识图
+29. pyv8环境搭建执行js
+30. elk
+31. jenkins与git/svn
+32. sentry8
+33. gerapy与webssh
+34. 跨节点多爬虫系统，负载均衡，任务调度，状态展示，动态部署
+
+1. js逆向
+    
+	1. 逆向流程-关键点寻找
+    
+	2. eval动态执行
+    
+	3. cookie跟踪
+    
+	4. wepack等主流前端代码压缩后分析
+    
+	5. 加密解密函数介绍（md5，sha1，rsa，aes，des，3ds）
+    
+	6. hmac签名机制流程
+
+2. 通用爬虫实现方案
+
+3. 代理使用
+    
+	1. 代理池设计
+    
+	2. 动态代理
+    
+	3. adsl代理
+    
+	4. 代理服务器搭建
+    
+	5. 使用代理爬取墙外数据
+
+4. 数据去重清洗方案
+    
+	1. 请求去重
+        
+	1. 哈希算法去重
+        
+	2. bitmap去重
+        
+	3. 布隆算法去重
+    
+	2. 内容去重
+        
+	1. 哈希内容去重
+        
+	2. 数据库唯一索引去重
+        
+	3. simhash算法计算相似度去重
+
+5. selenium高阶
+
+6. 主流验证码处理
+    
+	1. tesseract识别
+    
+	2. tesseract自定义训练识别
+    
+	3. 打码平台
+    
+	4. 机器学习集成
+
+7. 爬虫可持续部署
+    
+	1. scrapyd
+    
+	2. spiderkeeper
+
+8. 爬虫数据存储引擎集成
+    
+	1. mongodb
+    
+	2. redis
+    
+	3. hbase
+    
+	4. elasticsearch
+
+9. 爬虫数据监控实战
+    
+	1. 股票数据监控
+    
+	2. 交易数据监控等
+
+10. 手机端爬虫
+    
+	1. appium直接提取数据
+    
+	2. appium集成mitiproxy拦截数据抓取
+    
+	3. android或ios逆向分析提取数据
+    
+	4. 手机端爬虫部署
+
+11. socket和websocket数据爬取

@@ -1,0 +1,565 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>元素定位 | Web自动化测试</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../C02-WebDriver_Base/xpath_css.html" />
+    
+    
+    <link rel="prev" href="../C02-WebDriver_Base/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.1"
+        data-chapter-title="元素定位"
+        data-filepath="C02-WebDriver_Base/elements_location.md"
+        data-basepath=".."
+        data-revision="Sun Apr 21 2019 14:12:26 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="C01-Introduction/index.html">
+            
+                
+                    <a href="../C01-Introduction/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第1章-Web自动化入门
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="C01-Introduction/choice_tools.html">
+            
+                
+                    <a href="../C01-Introduction/choice_tools.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Web自动化工具选择
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="C01-Introduction/install_selenium.html">
+            
+                
+                    <a href="../C01-Introduction/install_selenium.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Selnium 概述、环境搭建
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="C02-WebDriver_Base/index.html">
+            
+                
+                    <a href="../C02-WebDriver_Base/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第2章-WebDriver基本操作
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1" data-path="C02-WebDriver_Base/elements_location.html">
+            
+                
+                    <a href="../C02-WebDriver_Base/elements_location.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        元素定位
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="C02-WebDriver_Base/xpath_css.html">
+            
+                
+                    <a href="../C02-WebDriver_Base/xpath_css.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        xpath、css定位
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="C02-WebDriver_Base/ele_webdriver.html">
+            
+                
+                    <a href="../C02-WebDriver_Base/ele_webdriver.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        元素和浏览器操作方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="C02-WebDriver_Base/ele_wait.html">
+            
+                
+                    <a href="../C02-WebDriver_Base/ele_wait.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        元素等待
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="C03-WebDriver_pro/index.html">
+            
+                
+                    <a href="../C03-WebDriver_pro/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第3章-WebDriver中级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="C03-WebDriver_pro/mouse_key_operations.html">
+            
+                
+                    <a href="../C03-WebDriver_pro/mouse_key_operations.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        鼠标、键盘操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="C03-WebDriver_pro/select_alert_scroll.html">
+            
+                
+                    <a href="../C03-WebDriver_pro/select_alert_scroll.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        下拉选择框、警告框、滚动条操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="C03-WebDriver_pro/frame_windows.html">
+            
+                
+                    <a href="../C03-WebDriver_pro/frame_windows.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        frame 表单切换、多窗口切换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="C03-WebDriver_pro/screenshot.html">
+            
+                
+                    <a href="../C03-WebDriver_pro/screenshot.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        窗口截图、验证码处理
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="C04-WebDriver_grate/index.html">
+            
+                
+                    <a href="../C04-WebDriver_grate/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第4章-自动化测试-高级篇
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="C04-WebDriver_grate/UnitTest.html">
+            
+                
+                    <a href="../C04-WebDriver_grate/UnitTest.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        UnitTest框架
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="C04-WebDriver_grate/alert.html">
+            
+                
+                    <a href="../C04-WebDriver_grate/alert.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        UnitTest断言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="C04-WebDriver_grate/testcase_log.html">
+            
+                
+                    <a href="../C04-WebDriver_grate/testcase_log.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        生成HTML测试报告
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="C04-WebDriver_grate/alert_log.html">
+            
+                
+                    <a href="../C04-WebDriver_grate/alert_log.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        附件-断言资料
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Web自动化测试</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x5143;&#x7D20;&#x5B9A;&#x4F4D;">&#x5143;&#x7D20;&#x5B9A;&#x4F4D;</h2>
+<h3 id="&#x76EE;&#x6807;">&#x76EE;&#x6807;</h3>
+<pre><code>1. &#x4E86;&#x89E3;&#x5143;&#x7D20;&#x5404;&#x79CD;&#x5B9A;&#x4F4D;&#x65B9;&#x6CD5;
+2. &#x638C;&#x63E1;id&#x3001;name&#x3001;class_name&#x3001;tag_name&#x3001;link_text&#x3001;partial_link_text&#x5B9A;&#x4F4D;&#x7684;&#x4F7F;&#x7528;
+</code></pre><h2 id="1-&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5B66;&#x4E60;&#x5143;&#x7D20;&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;&#xFF1F;">1. &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5B66;&#x4E60;&#x5143;&#x7D20;&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;&#xFF1F;</h2>
+<pre><code>1. &#x8BA9;&#x7A0B;&#x5E8F;&#x64CD;&#x4F5C;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x5148;&#x627E;&#x5230;&#x6B64;&#x5143;&#x7D20;&#xFF1B;
+2. &#x7A0B;&#x5E8F;&#x4E0D;&#x50CF;&#x4EBA;&#x7C7B;&#x7528;&#x773C;&#x775B;&#x76F4;&#x63A5;&#x5B9A;&#x4F4D;&#x5230;&#x5143;&#x7D20;&#xFF1B;
+3. WebDriver&#x63D0;&#x4F9B;&#x4E86;&#x516B;&#x79CD;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x65B9;&#x5F0F;
+</code></pre><h2 id="2-webdriver-&#x5143;&#x7D20;&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;">2. WebDriver &#x5143;&#x7D20;&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;</h2>
+<pre><code>1. id
+2. name
+3. class_name
+4. tag_name
+5. link_text
+6. partial_link_text
+</code></pre><h3 id="&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;&#x5206;&#x7C7B;&#x6C47;&#x603B;&#xFF1A;">&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;&#x5206;&#x7C7B;-&#x6C47;&#x603B;&#xFF1A;</h3>
+<pre><code>1). id&#x3001;name&#x3001;class_name&#xFF1A;&#x4E3A;&#x5143;&#x7D20;&#x5C5E;&#x6027;&#x5B9A;&#x4F4D;
+2). tag_name&#xFF1A;&#x4E3A;&#x5143;&#x7D20;&#x6807;&#x7B7E;&#x540D;&#x79F0;
+3). link_text&#x3001;partial_link_text&#xFF1A;&#x4E3A;&#x8D85;&#x94FE;&#x63A5;&#x5B9A;&#x4F4D;(a&#x6807;&#x7B7E;)
+4). Xpath&#xFF1A;&#x4E3A;&#x5143;&#x7D20;&#x8DEF;&#x5F84;&#x5B9A;&#x4F4D;
+5). Css&#xFF1A;&#x4E3A;CSS&#x9009;&#x62E9;&#x5668;&#x5B9A;&#x4F4D;
+</code></pre><h3 id="&#x6848;&#x4F8B;1-&#x6CE8;&#x518C;&#x9875;&#x9762;">&#x6848;&#x4F8B;-1 <a href="../images/&#x7D20;&#x6750;-&#x6CE8;&#x518C;&#x9875;&#x9762;.rar">&#x6CE8;&#x518C;&#x9875;&#x9762;</a></h3>
+<pre><code>1. &#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x5B66;&#x4E60;&#x8FD9;&#x516B;&#x79CD;&#x65B9;&#x5F0F;&#x548C;&#x7F51;&#x7EDC;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x6848;&#x4F8B;-1&#x6CE8;&#x518C;&#x9875;&#x9762;&#x4E0A;&#x6765;&#x7EC3;&#x4E60;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;&#x8BBE;&#x8BA1;&#xFF0C;&#x63D0;&#x9AD8;&#x5B66;&#x4E60;&#x6548;&#x7387;&#x548C;
+   &#x811A;&#x672C;&#x6267;&#x884C;&#x901F;&#x7387;
+2. &#x8BED;&#x8A00;&#x4F7F;&#x7528;Python
+3. &#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x4F7F;&#x7528;Pycharm
+4. selenium&#x4F7F;&#x7528;2.48.0
+</code></pre><h3 id="21--id&#x5B9A;&#x4F4D;">2.1  id&#x5B9A;&#x4F4D;</h3>
+<pre><code>&#x5B9E;&#x73B0;&#x6848;&#x4F8B;-1&#x9700;&#x6C42;&#xFF1A;
+    1). &#x6253;&#x5F00;&#x6CE8;&#x518C;A.html&#x9875;&#x9762;&#xFF0C;&#x4F7F;&#x7528;id&#x5B9A;&#x4F4D;&#xFF0C;&#x81EA;&#x52A8;&#x586B;&#x5199;(&#x8D26;&#x53F7;A&#xFF1A;admin&#x3001;&#x5BC6;&#x7801;A:123456)
+    2). &#x586B;&#x5199;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;3&#x79D2;&#x949F;&#x5173;&#x95ED;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;
+</code></pre><p>&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;:</p>
+<blockquote>
+<p>find_element_by_if()</p>
+</blockquote>
+<p>&#x5B9E;&#x73B0;</p>
+<pre><code>from selenium import webdriver
+from time import sleep
+driver=webdriver.Firefox()
+url=&apos;E:\\&#x6D4B;&#x8BD5;\\&#x8BFE;&#x4EF6;\\Web&#x81EA;&#x52A8;&#x5316;\\Web&#x81EA;&#x52A8;&#x5316;&#x8BFE;&#x4EF6;\\02img\\&#x6CE8;&#x518C;A.html&apos;
+driver.get(url)
+user=driver.find_element_by_id(&quot;userA&quot;)
+user.send_keys(&quot;admin&quot;)
+pwd=driver.find_element_by_id(&quot;passwordA&quot;)
+pwd.send_keys(&quot;123456&quot;)
+sleep(3)
+driver.quit()
+</code></pre><h3 id="22--name&#x5C5E;&#x6027;&#x5B9A;&#x4F4D;">2.2  name&#x5C5E;&#x6027;&#x5B9A;&#x4F4D;</h3>
+<p>&#x5B9E;&#x73B0;&#x6848;&#x4F8B;-1&#x9700;&#x6C42;&#xFF1A;
+1). &#x6253;&#x5F00;&#x6CE8;&#x518C;A.html&#x9875;&#x9762;&#xFF0C;&#x4F7F;&#x7528;id&#x5B9A;&#x4F4D;&#xFF0C;&#x81EA;&#x52A8;&#x586B;&#x5199;(&#x8D26;&#x53F7;A&#xFF1A;admin&#x3001;&#x5BC6;&#x7801;A:123456)
+2). &#x586B;&#x5199;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;3&#x79D2;&#x949F;&#x5173;&#x95ED;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;  </p>
+<p>&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</p>
+<blockquote>
+<p>find_element_by_name</p>
+</blockquote>
+<h3 id="23-classname-&#x5B9A;&#x4F4D;">2.3 class_name &#x5B9A;&#x4F4D;</h3>
+<pre><code>&#x5B9E;&#x73B0;&#x6848;&#x4F8B;-1&#x9700;&#x6C42;&#xFF1A;
+    &#x901A;&#x8FC7;class_name&#x5B9A;&#x4F4D;&#x7535;&#x8BDD;&#x53F7;&#x7801;A&#xFF0C;&#x5E76;&#x53D1;&#x9001;18611111111
+</code></pre><p>&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</p>
+<blockquote>
+<p>find_element_by_class_name()</p>
+</blockquote>
+<h3 id="24-tagname-&#x5B9A;&#x4F4D;">2.4 tag_name &#x5B9A;&#x4F4D;</h3>
+<pre><code>&#x5B9E;&#x73B0;&#x6848;&#x4F8B;-1&#x9700;&#x6C42;&#xFF1A;
+    1). &#x6253;&#x5F00;&#x6CE8;&#x518C;A.html&#x9875;&#x9762;&#xFF0C;&#x4F7F;&#x7528;tag_name&#x5B9A;&#x4F4D;&#xFF0C;&#x81EA;&#x52A8;&#x586B;&#x5199;(&#x8D26;&#x53F7;A&#xFF1A;admin)
+    2). &#x586B;&#x5199;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;3&#x79D2;&#x949F;&#x5173;&#x95ED;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;
+</code></pre><p>&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</p>
+<blockquote>
+<p>find_element_by_tag_name()    &#x8FD4;&#x56DE;:&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;</p>
+</blockquote>
+<h3 id="25-linktext&#x5B9A;&#x4F4D;">2.5 link_text&#x5B9A;&#x4F4D;</h3>
+<p>&#x8BF4;&#x660E;: <strong>&#x4E13;&#x95E8;&#x5B9A;&#x4F4D;&#x8D85;&#x94FE;&#x63A5;&#x6587;&#x672C;</strong>(<a>&#x6807;&#x7B7E;</a>), &#x5168;&#x90E8;&#x5339;&#x914D;</p>
+<pre><code>&#x5B9E;&#x73B0;&#x6848;&#x4F8B;-1&#x9700;&#x6C42;&#xFF1A;
+    1). &#x6253;&#x5F00;&#x6CE8;&#x518C;A.html&#x9875;&#x9762;&#xFF0C;&#x4F7F;&#x7528;link_text&#x5B9A;&#x4F4D;(&#x8BBF;&#x95EE; &#x65B0;&#x6D6A; &#x7F51;&#x7AD9;)&#x8D85;&#x94FE;&#x63A5;
+    2). 3&#x79D2;&#x949F;&#x5173;&#x95ED;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;
+</code></pre><p>&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</p>
+<blockquote>
+<p>find_element_by_link_text()</p>
+</blockquote>
+<h3 id="26-partiallinktext">2.6 partial_link_text</h3>
+<p>&#x8BF4;&#x660E;: partial_link_text&#x5B9A;&#x4F4D;&#x662F;&#x5BF9;link_text&#x5B9A;&#x4F4D;&#x7684;&#x8865;&#x5145;&#xFF0C;partial_like_text&#x4E3A;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#xFF1B;</p>
+<pre><code>&#x5B9E;&#x73B0;&#x6848;&#x4F8B;-1&#x9700;&#x6C42;&#xFF1A;
+    1). &#x6253;&#x5F00;&#x6CE8;&#x518C;A.html&#x9875;&#x9762;&#xFF0C;&#x4F7F;&#x7528;partial_link_text&#x5B9A;&#x4F4D;(&#x8BBF;&#x95EE; &#x65B0;&#x6D6A; &#x7F51;&#x7AD9;)&#x8D85;&#x94FE;&#x63A5;
+    2). 3&#x79D2;&#x949F;&#x5173;&#x95ED;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;
+</code></pre><p>&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</p>
+<blockquote>
+<p>find_element_by_partial_link_text()</p>
+</blockquote>
+<h2 id="3-&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x5217;&#x8868;">3. &#x83B7;&#x53D6;&#x5143;&#x7D20;&#x5217;&#x8868;</h2>
+<p><img src="../images/elements.png" alt="&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x5217;&#x8868;"></p>
+<pre><code>&#x4F5C;&#x7528;&#xFF1A;
+    1). &#x67E5;&#x627E;&#x5B9A;&#x4F4D;&#x6240;&#x6709;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5143;&#x7D20;
+    2). &#x8FD4;&#x56DE;&#x7684;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x683C;&#x5F0F;&#x4E3A;&#x6570;&#x7EC4;(&#x5217;&#x8868;)&#x683C;&#x5F0F;&#xFF1B;
+&#x8BF4;&#x660E;&#xFF1A;
+    1). &#x5217;&#x8868;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x7684;&#x8BFB;&#x53D6;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x4E0B;&#x6807;(&#x4E0B;&#x6807;&#x4ECE;0&#x5F00;&#x59CB;)
+</code></pre><p><strong>&#x4F7F;&#x7528;&#x8BF4;&#x660E;</strong></p>
+<p>&#x548C;&#x83B7;&#x53D6;&#x5355;&#x4E2A;&#x5143;&#x7D20;find_element_by_xxx &#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E00;&#x6837;. &#x4F8B;&#x5982;: </p>
+<pre><code>&#x8BF4;&#x660E;&#xFF1A;&#x4F7F;&#x7528;tag_name&#x83B7;&#x53D6;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;(&#x5BC6;&#x7801;&#x6846;)
+
+&#x4EE3;&#x7801;&#xFF1A;
+    ...
+    driver.find_elements_by_tag_name(&quot;input&quot;)[1].send_keys(&quot;123456&quot;)
+    ...
+</code></pre><h2 id="&#x601D;&#x8003;&#xFF1F;">&#x601D;&#x8003;&#xFF1F;</h2>
+<pre><code>1. &#x5728;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#x6807;&#x7B7E;&#x6CA1;&#x6709;id&#x3001;name&#x3001;class&#x5C5E;&#x6027;&#x6539;&#x5982;&#x4F55;&#x5B9A;&#x4F4D;&#xFF1F;
+2. id&#x3001;name&#x3001;class&#x5C5E;&#x6027;&#x503C;&#x4E3A;&#x52A8;&#x6001;&#x83B7;&#x53D6;&#xFF0C;&#x968F;&#x7740;&#x5237;&#x65B0;&#x6216;&#x52A0;&#x8F7D;&#x800C;&#x53D8;&#x5316;&#xFF0C;&#x6539;&#x5982;&#x4F55;&#x5B9A;&#x4F4D;&#xFF1F;
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../C02-WebDriver_Base/index.html" class="navigation navigation-prev " aria-label="Previous page: 第2章-WebDriver基本操作"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../C02-WebDriver_Base/xpath_css.html" class="navigation navigation-next " aria-label="Next page: xpath、css定位"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

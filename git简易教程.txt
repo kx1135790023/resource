@@ -1,0 +1,21 @@
+简易的命令行入门教程:
+
+Git 全局设置:
+git config --global user.name "123"
+git config --global user.email "123@qq.com"
+
+没有本地仓库(创建git本地仓库，并与远端仓库关联):
+mkdir test17
+cd test17
+git init
+
+git add .
+git commit -m "init"
+git remote add origin https://gitee.com/xxx.git
+git push -u origin master
+
+
+已有本地仓库(切换到相应目录，并与远端关联)
+cd existing_git_repo
+git remote add origin https://gitee.com/xxx.git
+git push -u origin master

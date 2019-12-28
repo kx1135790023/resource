@@ -1,0 +1,237 @@
+***********************flask本地部署××××××××××××××××××××××××××××
+
+说明： 由于部署在本地，不需要购买服务器，同时本地已有mysql, redis, 虚拟环境，只需安装nginx, gunicorn即可
+
+step1: nginx 安装启动及配置
+# 安装
+sudo apt-get install nginx
+
+
+#配置文件
+编辑文件:sudo vim /etc/nginx/sites-available/default
+
+# 如果是多台服务器的话，则在此配置，并修改 location 节点下面的 proxy_pass 
+upstream flask {
+        server 127.0.0.1:5000;
+        server 127.0.0.1:5001;
+}
+server {
+        # 监听80端口
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+
+
+        server_name _;
+
+        location / {
+		
+				root /information;
+
+				index index.html index.htm index.nginx-debian.html;
+                # 请求转发到gunicorn服务器
+                proxy_pass http://127.0.0.1:5000;
+                # 请求转发到多个gunicorn服务器
+                # proxy_pass http://flask;
+                # 设置请求头，并将头信息传递给服务器端 
+                proxy_set_header Host $host;
+                # 设置请求头，传递原始请求ip给 gunicorn 服务器
+                proxy_set_header X-Real-IP $remote_addr;
+        }
+}
+
+# 运行及停止
+/etc/init.d/nginx start #启动
+/etc/init.d/nginx stop  #停止
+
+
+step2: gunicorn 安装及启动
+# 安装（记得workon information27，在虚拟环境中安装）
+pip install gunicorn
+
+# 查看选项
+gunicorn -h
+
+# 运行（记得切换到项目目录，gunicorn可获取到相应的虚拟环境）
+# -w: 表示进程（worker） -b：表示绑定ip地址和端口号（bind）
+gunicorn -w 2 -b 127.0.0.1:5000 运行文件名称:Flask程序实例名
+
+e.g.:
+（记得切换到项目目录）
+gunicorn -w 2 -b 127.0.0.1:5000 manage:app   
+
+或者
+gunicorn -w 2 -b 127.0.0.1:5000 manage:app  -D（前面都不报错再运行）
+
+
+
+
+
+
+***********************flask阿里云部署**************************
+准备工作：
+阿里云个人免费获取网址   https://free.aliyun.com/ 中相应产品（只领取ecs云服务器即可）
+创建服务器选择 镜像---ubuntu16.04 64位
+待手机上收到相应的开通通知后，选择相应的区（比如：华东2区），即可在实例中查看相应信息
+
+添加端口：点击安全组---配置规则---添加安全组规则---(5000,5001 端口范围：5000/5000，5001/5001,80/80,  授权对象：0.0.0.0/0 )
+
+更改密码：依次点击实例---更多---密码/秘钥---重置实例密码，然后依次点击更多---密码状态---重启
+
+
+
+以下在xshell中操作:
+
+step1: 
+# 连接远程服务器(可通过xshell)
+ssh root@ip
+password：输入阿里云实例修改的密码
+
+e.g.:
+ssh root@101.132.134.154
+password:A123456
+
+step2:
+#更新源：
+sudo apt-get update
+
+step3:
+# git安装：
+apt install git
+git clone  https://gitee.com/itcastyinqiaoyin/information27.git   (可换成自己的)
+
+step4：
+# 安装虚拟环境:
+pip install virtualenv
+pip install virtualenvwrapper
+
+#编辑配置：sudo vi ~/.bashrc
+(文件最后)输入下面内容：
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/workspace
+source /usr/local/bin/virtualenvwrapper.sh
+
+#重启： source ~/.bashrc
+
+
+#创建python3 版本的flask虚拟环境：
+mkvirtualenv -p python3 py3_flask
+
+#生成requements.txt文件(如果拉取的是老师的代码，此部省略)
+pip freeze > requirements.txt
+
+#(通过filezilla将requirements.txt上传到服务器)
+(可能会报错，建议先执行下面第一条命令)
+
+sudo apt-get build-dep python-mysqldb
+cd information27 
+pip install -r requirements.txt 
+
+
+step5:
+# mysql安装：(此部需要输入密码: mysql)
+apt-get install mysql-server
+apt-get install libmysqlclient-dev
+
+
+#创建数据库(跟自己代码中配置的数据库名字相同) 
+先进入mysql : mysql -uroot -pmysql
+create database information27 charset=utf8;
+
+
+#执行数据库迁移 （需cd 到git仓库clone下来的 information27）：
+cd information27
+python3 manage.py db init
+python3 manage.py db migrate -m 'initial'
+python3 manage.py db upgrade
+
+#测试数据导入（通过filezzilla上传测试数据库information_info_category.sql  ; information_info_news.sql）
+再次进入mysql 
+
+use information27
+source /root/information_info_category.sql;
+source /root/information_info_news.sql;
+
+step6:
+#redis安装：
+sudo apt-get install redis-server
+
+step7：
+# nginx安装及配置
+#安装：sudo apt-get install nginx
+#配置：sudo vi /etc/nginx/sites-available/default
+
+upstream flask {
+        server 127.0.0.1:5000;
+        server 127.0.0.1:5001;
+}
+server {
+        # 监听80端口
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+
+
+        server_name _;
+
+        location / {
+		
+				root /information27;
+
+				index index.html index.htm index.nginx-debian.html;
+				
+				
+                # 请求转发到gunicorn服务器
+                proxy_pass http://127.0.0.1:5000;
+                # 请求转发到多个gunicorn服务器
+                # proxy_pass http://flask;
+                # 设置请求头，并将头信息传递给服务器端 
+                proxy_set_header Host $host;
+                # 设置请求头，传递原始请求ip给 gunicorn 服务器
+                proxy_set_header X-Real-IP $remote_addr;
+        }
+}
+
+
+#启动 /etc/init.d/nginx start 
+ 停止 /etc/init.d/nginx stop  
+
+step8：
+# gunicorn安装和启动
+cd information27
+pip install gunicorn    （先进入虚拟环境）
+gunicorn -w 2 -b 私网ip:5000 manage:app   
+
+# step9:
+浏览器访问: http://39.107.30.201:5000/
+
+# step10:
+没有问题后，后台运行
+
+gunicorn -w 2 -b 私网ip:5000 manage:app  &
+或者
+gunicorn -w 2 -b 私网ip:5000 manage:app  -d
+
+
+说明：
+如果没有filezilla，可通过 scp -r 本地文件路径 root@39.106.21.198:远程保存路径 
+
+********************************nginx分发*********************************
+准备：information27 information27_2（index.html 标题栏样式做修改）
+配置nginx :
+        location / {
+                # 请求转发到gunicorn服务器
+                #proxy_pass http://127.0.0.1:5000;
+                # 请求转发到多个gunicorn服务器
+                proxy_pass http://flask;
+                # 设置请求头，并将头信息传递给服务器端 
+                proxy_set_header Host $host;
+                # 设置请求头，传递原始请求ip给 gunicorn 服务器
+                proxy_set_header X-Real-IP $remote_addr;
+        }
+
+重启nginx: /etc/init.d/nginx start
+
+cd information27 :  gunicorn -w 2 -b 127.0.0.1:5000 manage:app
+cd information27_2: gunicorn -w 2 -b 127.0.0.1:5001 manage:app
